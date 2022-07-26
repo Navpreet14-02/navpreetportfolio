@@ -1,0 +1,572 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@600&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: rgb(33, 33, 33);
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: rgb(20, 20, 20);
+    box-shadow: 0 2px 2px black;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.logo {
+    height: 50px;
+    width: 50x;
+    box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.686);
+}
+
+.logo img {
+    height: 100%;
+    width: 100%;
+}
+
+.nav-items {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-items li {
+    color: white;
+    margin: 0 2rem;
+}
+
+.nav-items li .items {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.79);
+    font-size: 1.2rem;
+    transition: all ease-in-out 0.2s;
+}
+
+.nav-items li .items:hover {
+    color: #FF69B4;
+}
+
+.toggle-button {
+    position: absolute;
+    top: 2rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 31px;
+    height: 24px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.contact {
+    padding: 1rem 0;
+    border: 1px solid aqua;
+    color: rgba(255, 255, 255, 0.722);
+    display: inline-block;
+    font-size: 20px;
+    transition: all ease-in-out 0.2s;
+    width: 160px;
+    text-decoration: none;
+    text-align: center;
+    box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.686);
+    border-radius: 5px;
+}
+
+.contact:hover {
+    background-color: aqua;
+    color: black;
+    font-weight: bolder;
+}
+
+.intro {
+    /* height: 60vh; */
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../Images/img2.jfif');
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem;
+}
+
+.intro-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 80%;
+    /* width: 30%; */
+    padding: 1rem;
+    color: rgba(255, 255, 255, 0.815);
+}
+
+.intro-text p {
+    font-size: 6vw;
+    font-weight: 200;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.intro-text .introduction .name {
+    font-weight: 600;
+    display: inline-block;
+    color: rgba(20, 20, 20, 0.696);
+    font-family: 'Noto Sans', sans-serif;
+    position: relative;
+    -webkit-text-stroke: 0.2vw rgba(200, 129, 141, 0.842);
+    white-space: nowrap;
+    
+}
+
+.intro-text .introduction .name::before {
+    content: attr(data-text);
+    position: absolute;
+    white-space: nowrap;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 100%;
+    color: rgba(200, 129, 141, 0.842);
+    -webkit-text-stroke: 0vw rgba(20, 20, 20, 0.696);
+    border-right: 2px solid rgba(200, 129, 141, 0.842);
+    overflow: hidden;
+    animation: nameAnimation 5s linear infinite;
+}
+
+.intro-text .designation {
+    font-size: 2vw;
+}
+
+.intro-image {
+    height: 50vh;
+    width: 21vw;
+}
+
+.intro-image img {
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+}
+
+main {
+    text-align: center;
+}
+
+.heading {
+    text-align: center;
+    color: white;
+    border-bottom: 1px solid skyblue;
+    display: inline-block;
+    margin: 2rem;
+    font-size: 4rem;
+}
+
+.about {
+    height: 70vh;
+    width: 95%;
+    margin: 0 auto;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../Images/img1.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 0 0 6px 6px rgba(0, 0, 0, 0.642);
+}
+
+.about-image {
+    height: 80%;
+    filter: brightness(60%);
+    box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    margin: 4rem;
+}
+
+.about-text {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 80%;
+    padding: 1rem;
+    margin: 4rem;
+    color: rgba(255, 255, 255, 0.833);
+    font-family: 'Ibarra Real Nova', serif;
+    font-size: 1.75vw;
+}
+
+.skills {
+    width: 85vw;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    /* border: 1px solid white; */
+
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    width: 23vw;
+    min-width: 20vw;
+    margin: 2rem;
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 6px 6px black;
+    border-radius: 10px;
+    /* border: 1px solid white; */
+}
+
+.skill-icon {
+    height: 60px;
+    width: 60px;
+}
+
+.skill-name {
+    color: rgba(255, 255, 255, 0.833);
+    font-size: 2rem;
+    margin: 0.8rem;
+
+}
+
+.status {
+    width: 90%;
+    border: none;
+    height: 4px;
+    background-color: white;
+    border-radius: 5px;
+    margin: 1rem;
+}
+
+.skill1 .status-bar {
+    height: 100%;
+    width: 90%;
+    background-color: orangered;
+}
+
+.skill2 .status-bar {
+    height: 100%;
+    width: 80%;
+    background-color: #0096FF;
+}
+
+.skill3 .status-bar {
+    height: 100%;
+    width: 65%;
+    background-color: #FDDA0D;
+}
+
+.skill4 .status-bar {
+    height: 100%;
+    width: 80%;
+    background-color: #0047AB;
+}
+
+.skill5 .status-bar {
+    height: 100%;
+    width: 50%;
+    background-color: red;
+}
+
+.skill6 .status-bar {
+    height: 100%;
+    width: 75%;
+    background-color: #E49B0F;
+}
+
+.projects {
+    width: 85vw;
+    padding: 1rem;
+    display: flex;
+    margin: 1rem auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    color: white;
+    width: 35vw;
+    box-shadow: 0 0 6px 6px black;
+    margin: 2rem;
+    height: 40vh;
+}
+
+.project-name a{
+    visibility: hidden;
+    transition: all ease-in-out 0.2s;
+    color: rgba(255, 255, 255, 0.808);
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+}
+
+
+.project1 {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../Images/drumKit.JPG');
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-clip: border-box;
+
+}
+
+.project1:hover {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../Images/drumKit.JPG');
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    transition: all ease-in-out 0.2s;
+}
+
+.project1:hover .project-name a{
+    visibility: visible;
+
+}
+
+.project2 {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../Images/videoPlayer.JPG');
+    ;
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    transition: all ease-in-out 0.2s;
+}
+
+.project2:hover {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../Images/videoPlayer.JPG');
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.project2:hover .project-name a{
+    visibility: visible;
+
+}
+
+
+.project3 {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../Images/moleGame.JPG');
+    background-position: center;
+    background-size: 100% 100%;
+    transition: all ease-in-out 0.s;
+}
+
+.project3:hover {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../Images/moleGame.JPG');
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.project3:hover .project-name a{
+    visibility: visible;
+    
+
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    height: 5vh;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.bi{
+    color: white;
+}
+
+/* Animations */
+
+@keyframes nameAnimation {
+
+    0%,
+    10%,
+    100% {
+        width: 0;
+    }
+
+    70%,
+    90% {
+        width: 100%;
+    }
+}
+
+
+
+
+/* Responsive Media Queries */
+
+
+@media only screen and (max-width: 1400px) {
+    .skill {
+        width: 30vw;
+    }
+
+    .project-name {
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .about-image {
+        display: none;
+    }
+
+    .projects {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .project {
+        width: 50vw;
+        height: 50vh;
+    }
+
+    /* Responsive Navbar */
+    .toggle-button {
+        display: flex;
+    }
+
+    .nav-items {
+        display: none;
+        width: 100%;
+    }
+
+    .nav-items li {
+        margin: 1rem 0;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-items {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-items.active {
+        display: flex;
+    }
+
+}
+
+@media only screen and (max-width: 700px) {
+    .intro {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .intro-text {
+        align-items: center;
+
+    }
+
+    .intro-text .introduction {
+        font-size: 1.2rem;
+    }
+
+    .intro-image {
+        width: 40vw;
+        height: 38vh;
+    }
+
+    .designation {
+        display: none;
+    }
+
+    .about-text {
+        font-size: 3.5vw;
+        font-weight: 200;
+        margin: 0.4rem 1rem;
+    }
+
+    .skills {
+        flex-direction: column;
+    }
+
+    .skill {
+        width: 50vw;
+    }
+
+    .heading {
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .projects {
+        padding: 0;
+    }
+    .about{
+        margin: auto;
+        padding: 0.2rem;
+    }
+    .about-text{
+        margin: 0;
+        padding: 0.2rem;
+    }
+    .skills {
+        padding: 0;
+    }
+
+    .skill {
+        width: 70vw;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .project {
+        margin: 2rem 0.5rem;
+        height: 35vh;
+        width: 75vw;
+    }
+
+    .project-name a{
+        visibility: visible;
+        font-size: 1rem;
+    }
+    footer{
+        font-size: 16px;
+    }
+    footer svg{
+        height: 10;
+        width: 10;
+    }
+}
